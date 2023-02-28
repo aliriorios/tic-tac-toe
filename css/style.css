@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: hash-font;
+  src: url(../fonts/neue-helvetica-85-heavy.otf);
+}
+
+:root {
+  /* PALETA DE CORES */
+  --bg-01: #0F3143;
+  --bg-02: #163342;
+  --bg-03: #195159;
+  --bg-04: #45ACAB;
+  --bg-05: #FEFFFF;
+
+  --border: #8DEFE2;
+
+  --player2: #ff4040;
+
+  --vitory: #2ADCB2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+
+  text-decoration: none;
+  border: none;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+
+  background: var(--bg-01);
+
+  display: grid;
+  justify-content: center;
+  align-content: center;
+
+  font-family: hash-font;
+  font-size: 4rem;
+}
+
+#board {
+  width: 400px;
+  height: 400px;
+
+  background: var(--bg-03);
+  border: 5px solid var(--border);
+  border-radius: 20px;
+
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(3, auto);
+}
+
+.cell {
+  background: var(--bg-05);
+
+  width: 100px;
+  height: 100px;
+
+  margin: 5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 20px;
+
+  transition: box-shadow, 0.3s;
+}
+
+.cell:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 20px var(--border);
+}
+
+.cell > p {
+  color: var(--bg-04);
+}
